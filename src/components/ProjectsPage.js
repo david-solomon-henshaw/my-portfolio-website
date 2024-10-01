@@ -1,6 +1,8 @@
+
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaAws, FaReact, FaDatabase, FaPython, FaCamera, FaNode } from 'react-icons/fa';
-import { SiFirebase } from 'react-icons/si';
+import { SiFirebase, SiFlask, SiRender } from 'react-icons/si'; // Added Flask, Firebase, and Render icons
+import licensePlateGif from '../assets/License Plate App.gif'; // Adjust the path based on the location of your gif
 
 const projects = [
   {
@@ -32,13 +34,15 @@ const projects = [
     description: 'A web application designed for estate security and management, featuring license plate recognition to enhance safety and convenience for residents.',
     technologies: [
       { name: 'React', icon: <FaReact size={20} /> },
-      { name: 'Node.js', icon: <FaDatabase size={20} /> },
-      { name: 'Python', icon: <FaCamera size={20} /> }, // Assuming Python is used for image processing
-      {name: "Github", icon: <FaGithub size={20} />}
+      { name: 'Firebase', icon: <SiFirebase size={20} /> }, // Firebase for frontend hosting
+      { name: 'Flask', icon: <SiFlask size={20} /> },       // Flask for backend
+      { name: 'Render', icon: <SiRender size={20} /> },     // Render for hosting the API
+      { name: 'Python', icon: <FaCamera size={20} /> },     // Python for image processing
+      { name: 'Github', icon: <FaGithub size={20} /> }
     ],
     repoLink: 'https://github.com/yourusername/license-plate-scanner',
     demoLink: 'https://yourlicenseplatescanner.live',
-    image: 'https://via.placeholder.com/600x400', // Replace with actual image URL
+    image: licensePlateGif, // License plate GIF
   },
 ];
 

@@ -1,15 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaLaptopCode, FaRoad, FaHandsHelping } from 'react-icons/fa'; // Importing icons
+import { GiWashingMachine } from 'react-icons/gi';
 
 const AboutMe = () => {
   return (
     <motion.section
       id="about"
-      className="py-16 bg-black relative overflow-hidden min-h-screen" // Added min-h-screen
+      className="py-16 bg-black text-white relative overflow-hidden min-h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
+      {/* Background blob */}
       <div className="absolute inset-0 z-0">
         <svg
           viewBox="0 0 1440 320"
@@ -29,26 +32,85 @@ const AboutMe = () => {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-        <h2 className="text-3xl font-bold">About Me</h2>
-        <p className="mt-4 backdrop-blur-md bg-black bg-opacity-70 border border-white rounded-lg p-6 shadow-lg">
-          I am a passionate web developer with experience in building responsive and dynamic web applications. My journey began far from the tech world, working as a laundry man. Every day, I faced challenges that tested my resilience, but I always believed that hard work and dedication could pave the way to a better future.
-        </p>
-        <p className="mt-4 backdrop-blur-md bg-black bg-opacity-70 border border-white rounded-lg p-6 shadow-lg">
-          Driven by my desire to change my circumstances, I dove into learning technology. Late nights and early mornings spent studying JavaScript, React, and Node.js transformed my dreams into reality. From washing clothes to writing code, I've come a long way.
-        </p>
-        <p className="mt-4 backdrop-blur-md bg-black bg-opacity-70 border border-white rounded-lg p-6 shadow-lg">
-          I found inspiration in stories of successful developers who started from humble beginnings. This motivated me to embrace challenges and stay committed to my learning path. I began building small projects, each a stepping stone toward greater confidence and competence in my abilities.
-        </p>
-        <p className="mt-4 backdrop-blur-md bg-black bg-opacity-70 border border-white rounded-lg p-6 shadow-lg">
-          My skills include JavaScript, React, Node.js, and more. I’m particularly passionate about creating intuitive user experiences and robust backend systems. I believe that technology should be accessible to everyone, and I strive to build applications that reflect this philosophy.
-        </p>
-        <p className="mt-4 backdrop-blur-md bg-black bg-opacity-70 border border-white rounded-lg p-6 shadow-lg">
-          Beyond coding, I enjoy collaborating with others, sharing knowledge, and contributing to open-source projects. I find fulfillment in mentoring those who are just starting their journey in tech, as I remember the challenges I faced. 
-        </p>
-        <p className="mt-4 backdrop-blur-md bg-black bg-opacity-70 border border-white rounded-lg p-6 shadow-lg">
-          My story is one of perseverance and hope. I am committed to continuous growth and learning in the tech industry, driven by the belief that anyone can rise above their circumstances with determination and effort. I am excited to see where this journey will take me and look forward to contributing my skills to impactful projects.
-        </p>
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-center mb-10">About Me</h2>
+
+        {/* Timeline Section */}
+        <div className="relative wrap overflow-hidden p-10 h-full">
+          {/* Straight Line - Hidden on mobile */}
+          <div className="border-2 border-white absolute h-full left-1/2 transform -translate-x-1/2 hidden sm:block"></div>
+
+          {/* Journey Block */}
+          <div className="mb-8 flex justify-between items-center w-full right-timeline">
+            <div className="order-1 w-0 sm:w-5/12"></div>
+            <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
+              <GiWashingMachine className="text-black w-full h-full p-1" />
+            </div>
+            <div className="order-1 bg-gray-800 rounded-lg shadow-xl w-full sm:w-5/12 px-6 py-4">
+              <h3 className="text-xl font-bold">From Laundry to Code</h3>
+              <p className="text-gray-300 text-sm leading-snug tracking-wide">
+                My journey started far from the tech world. Working as a laundry man taught me resilience and determination. Every challenge was a step towards something greater.
+              </p>
+            </div>
+          </div>
+
+          {/* The Learning Path Block */}
+          <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div className="order-1 w-0 sm:w-5/12"></div>
+            <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
+              <FaRoad className="text-black w-full h-full p-1" />
+            </div>
+            <div className="order-1 bg-gray-800 rounded-lg shadow-xl w-full sm:w-5/12 px-6 py-4">
+              <h3 className="text-xl font-bold">The Learning Path</h3>
+              <p className="text-gray-300 text-sm leading-snug tracking-wide">
+                Driven by a desire for change, I spent countless hours learning JavaScript, React, and Node.js. Late nights and early mornings became the norm as I transitioned from washing clothes to writing code.
+              </p>
+            </div>
+          </div>
+
+          {/* Building Projects Block */}
+          <div className="mb-8 flex justify-between items-center w-full right-timeline">
+            <div className="order-1 w-0 sm:w-5/12"></div>
+            <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
+              <FaLaptopCode className="text-black w-full h-full p-1" />
+            </div>
+            <div className="order-1 bg-gray-800 rounded-lg shadow-xl w-full sm:w-5/12 px-6 py-4">
+              <h3 className="text-xl font-bold">Building Projects</h3>
+              <p className="text-gray-300 text-sm leading-snug tracking-wide">
+                I built small projects, each a stepping stone toward greater confidence in web development. Today, I work on creating intuitive, responsive web applications using the latest technologies.
+              </p>
+            </div>
+          </div>
+
+          {/* Collaboration and Mentorship Block */}
+          <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div className="order-1 w-0 sm:w-5/12"></div>
+            <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
+              <FaHandsHelping className="text-black w-full h-full p-1" />
+            </div>
+            <div className="order-1 bg-gray-800 rounded-lg shadow-xl w-full sm:w-5/12 px-6 py-4">
+              <h3 className="text-xl font-bold">Collaboration and Mentorship</h3>
+              <p className="text-gray-300 text-sm leading-snug tracking-wide">
+                Beyond coding, I love collaborating with others and mentoring new developers. I remember the challenges I faced, and I aim to help others overcome them as I did.
+              </p>
+            </div>
+          </div>
+
+          {/* Exploring SoloLearn Block */}
+          <div className="mb-8 flex justify-between items-center w-full right-timeline">
+            <div className="order-1 w-0 sm:w-5/12"></div>
+            <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
+              <FaLaptopCode className="text-black w-full h-full p-1" />
+            </div>
+            <div className="order-1 bg-gray-800 rounded-lg shadow-xl w-full sm:w-5/12 px-6 py-4">
+              <h3 className="text-xl font-bold">Exploring New Tools: SoloLearn</h3>
+              <p className="text-gray-300 text-sm leading-snug tracking-wide">
+                Recently, I started playing around with SoloLearn to further refine my coding skills. It's been a rewarding journey of continuous learning and growth.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </motion.section>
   );

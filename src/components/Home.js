@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-scroll'; // Ensure only react-scroll Link is used here
 import Hero from './HeroSection';
 import Projects from './ProjectsPage';
 import Certifications from './Certifications';
 import Technologies from './Technologies';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (

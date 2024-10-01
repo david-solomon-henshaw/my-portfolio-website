@@ -42,3 +42,36 @@ footer {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  animation: carousel 5s linear infinite; /* Reduced from 40s to 20s */
+}
+
+.carousel-item {
+  flex: 0 0 150px;
+  margin-right: 1rem;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/* Optional: Add a transition for smoother pause/resume */
+.carousel-track {
+  transition: all 0.5s ease;
+}
